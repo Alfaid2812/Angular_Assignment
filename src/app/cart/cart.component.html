@@ -9,6 +9,7 @@
             <tr>
                 <th class="bg-info text-white text-center">Product </th>
                 <th class="bg-info text-white text-center">Product Name</th>
+                <th class="bg-info text-white text-center">Product weight</th>
                 <th class="bg-info text-white text-center">Price</th>
                 <th class="bg-info text-white text-center">Delete</th>
             </tr>
@@ -17,6 +18,7 @@
             <tr *ngFor="let product of products">
                 <td><img [src]="product.image" alt="Product Image" class="product-image" height="50" width="50" /></td>
                 <td>{{product.name}}</td>
+                <td>{{product.weight}}</td>
                 <td>₹{{product.price}}</td>
                 <td><button (click)="deleteCartproducts(products)" class="bi bi-trash"> </button></td>
             </tr>
@@ -25,7 +27,7 @@
                 <td>₹{{total}}</td>
             </tr>
             <tr>
-                <td colspan="3" (click)="purchase()" align="right"><button class="btn btn-primary">Purchase</button></td>
+                <td colspan="3" (click)="purchase(order)" align="right"><button class="btn btn-primary">Purchase</button></td>
             </tr>
         </tbody>
     </table>

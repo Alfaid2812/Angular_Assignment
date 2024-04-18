@@ -1,0 +1,33 @@
+<h1 align="center">Orders</h1>
+
+<div class="container">
+  <div *ngIf="cartItems.length === 0" class="text-center">
+    <p>No items in the order.</p>
+  </div>
+  
+  <div *ngIf="cartItems.length > 0">
+    <table class="table text-center table-bordered table-sm">
+      <thead>
+        <tr>
+          <th class="bg-info text-white">Product</th>
+          <th class="bg-info text-white">Product Name</th>
+          <th class="bg-info text-white">Product weight</th>
+          <th class="bg-info text-white">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+        <td><img [src]="item.image" alt="Product Image" class="product-image" height="50" width="50" /></td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.weight }}</td>
+          <td>₹{{ item.price }}</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="right"><b>Total</b></td>
+          <td>₹{{ (total) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

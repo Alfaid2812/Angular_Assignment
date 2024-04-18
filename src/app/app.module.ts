@@ -8,6 +8,9 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OrdersComponent } from './orders/orders.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     CatalogueComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

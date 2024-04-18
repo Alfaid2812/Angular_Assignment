@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,9 +12,10 @@ export class CartComponent {
   products: any;
   total:any;
   cartItems : any;
+  order: any;
 
 
-   constructor(private service: AuthService){
+   constructor(private service: AuthService,private router: Router){
       this.total = 0;
       this.products = service.getCartItems();
       this.products.forEach((element: any) => {
@@ -29,10 +31,9 @@ export class CartComponent {
     this.total = this.total - products.price;
   }
 
-  purchase(){
-    this.products = [];
-    this.total = 0;
-    this.service.setCartItems();
+  purchase(order:any) {
+    this.service.purchase(order);
+    this.router.navigate(['/orders']);
   }
 
 }
