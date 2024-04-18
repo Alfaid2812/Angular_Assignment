@@ -1,0 +1,34 @@
+{
+    "products" :[
+        {
+            "name":"Red Chilli",
+            "image":"assets/Images/chilli.png",
+            "weight":"150 grams",
+            "price":"100"
+        },
+        {
+            "name":"Dhania Powder",
+            "image":"assets/Images/powder.png",
+            "weight":"150 grams",
+            "price":"100"
+        },
+        {
+            "name":"Coconut Powder",
+            "image":"assets/Images/coconutpowder.png",
+            "weight":"100 grams",
+            "price":"100"
+        },
+        {
+            "name":"Basmati Rice",
+            "image":"assets/Images/dawaat.png",
+            "weight":"1 kg",
+            "price":"140"
+        },
+        {
+            "name":"Jeera",
+            "image":"assets/Images/jeera.png",
+            "weight":"150 grams",
+            "price":"100"
+        }
+    ]
+}
