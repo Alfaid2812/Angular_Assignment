@@ -10,20 +10,20 @@ import { Router } from '@angular/router';
 export class CartComponent {
 
   products: any;
-  total:any;
-  cartItems : any;
+  total: any;
+  cartItems: any;
   order: any;
 
 
-   constructor(private service: AuthService,private router: Router){
-      this.total = 0;
-      this.products = service.getCartItems();
-      this.products.forEach((element: any) => {
-      this.total = this.total +parseInt(element.price);
+  constructor(private service: AuthService, private router: Router) {
+    this.total = 0;
+    this.products = service.getCartItems();
+    this.products.forEach((element: any) => {
+      this.total = this.total + parseInt(element.price);
     });
-   }
+  }
 
-   deleteCartproducts(products: any) {
+  deleteCartproducts(products: any) {
     const i = this.products.findIndex((element: any) => {
       return element.id == products.id;
     });
@@ -31,7 +31,7 @@ export class CartComponent {
     this.total = this.total - products.price;
   }
 
-  purchase(order:any) {
+  purchase(order: any) {
     this.service.purchase(order);
     this.router.navigate(['/orders']);
   }

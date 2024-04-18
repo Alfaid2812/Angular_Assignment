@@ -7,12 +7,12 @@ declare var $: any;
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent  implements OnInit {
+export class NavbarComponent implements OnInit {
 
   constructor() { }
   ngOnInit(): void {
-    $(document).ready(function(){
-      $('.navbar-toggler').click(function(){
+    $(document).ready(function () {
+      $('.navbar-toggler').click(function () {
         $('.navbar-collapse').toggleClass('show');
       });
     });

@@ -14,13 +14,13 @@ export class AuthService {
   constructor(private http: HttpClient) {
     this.cartItems = [];
     this.orders = [];
-   }
+  }
 
-  addToCart(product: any){
+  addToCart(product: any) {
     this.cartItems.push(product)
   }
 
-  getCartItems(): any{
+  getCartItems(): any {
     return this.cartItems;
   }
 
@@ -28,7 +28,7 @@ export class AuthService {
     this.cartItems.splice();
   }
 
-  purchase(order: any){
+  purchase(order: any) {
     this.orders.push(order)
   }
 
@@ -37,7 +37,7 @@ export class AuthService {
   }
 
   setOrders() {
-     this.orders.splice();
+    this.orders.splice();
   }
 
 }
